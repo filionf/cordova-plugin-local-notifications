@@ -402,7 +402,7 @@ public final class Builder {
         int reqCode = random.nextInt();
 
         PendingIntent contentIntent = PendingIntent.getService(
-                context, reqCode, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                context, reqCode, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         builder.setContentIntent(contentIntent);
     }
